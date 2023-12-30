@@ -28,19 +28,19 @@ cloudinary.config({
 })
 app.use(cookieParser())
 app.use(express.json())
-app.use(cors({origin:"https://backend-vert-tau.vercel.app/",credentials: true}))
+app.use(cors());
+//{origin:"http://localhost:3000",credentials: true}
 
-
-// app.use(function (req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Credentials", true);
-//     res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-//     res.header(
-//       "Access-Control-Allow-Headers",
-//       "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
-//     );
-//     // next();
-//   });
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Credentials", true);
+    res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
+    );
+    // next();
+  });
 
 
 app.use(bodyParser.urlencoded({extended:true, limit:"50mb"}))
