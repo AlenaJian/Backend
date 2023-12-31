@@ -30,7 +30,7 @@ const Login = () => {
     e.preventDefault()
     // , {withCredentials:true} 
     try{
-      const user = await axios.post("http://web-app-khans-projects-d3416322.vercel.app/api/u2/user/login-user",
+      const user = await axios.post("https://backend-vert-tau.vercel.app/api/u2/user/login-user",
       {email,pass} 
       ,{withCredentials:true})
       
@@ -136,13 +136,13 @@ const Login = () => {
                   id="remember-me"
                   className="h-4 w-4 text-blue-600  focus:ring-blue-500 border-gray-300 rounded-sm"
                 ></input>
-                <label
+                {/* <label
                   htmlFor="remeber-me"
                   className="ml-2  block text-gray-900 text-sm"
                 >
                   {" "}
                   Remember me
-                </label>
+                </label> */}
               </div>
               <div
               onClick={handelForgetPass}
