@@ -47,7 +47,7 @@ const SignUp = () => {
 
     try {
       const dat = await axios.post(
-        "http://localhost:8000/api/u2/user/create-user",
+        "https://backend-vert-tau.vercel.app/api/u2/user/create-user",
         { name, email,  password, avatar }
       );
       toast.success(dat.data.message);

@@ -55,7 +55,7 @@ const Login = () => {
 
   const handelForgetPass = async(e)=>{
     try{
-      const forget = await axios.post("http://localhost:8000/api/u2/user/forget-email",)
+      const forget = await axios.post("https://backend-vert-tau.vercel.app/api/u2/user/forget-email",)
     }
     catch(err){
       toast.error(err.response && err.response.data.message ? err.response.data.message : err.message)
